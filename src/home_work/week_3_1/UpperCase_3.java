@@ -28,7 +28,7 @@ public class UpperCase_3 {
         }
 
         for (int i=0;i<mass.length;i++ ){
-            System.out.printf (mass[i] + " ");
+            System.out.print(mass[i] + " ");
         }
 
 
