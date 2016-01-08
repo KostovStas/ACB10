@@ -1,10 +1,7 @@
 package home_work.week_3_1;
 import java.util.Scanner;
 
-// 5)������ ����������� � �������, ������ ������ ����� �������������, � ������ �������� ����� ������� ������ ������ �����.
-// ��������� �������� �� �������.
-// ����:   ��� ������ ��� ������� � �� ������� ���� ������?
-//  �����: ��� ��� ��� ���� � � ������� �� ?������
+
 // 5)Enter a sentence from the console, each even-numbered word is inverted in every odd word to delete every even numbered letter.
 // The result is output to the console.
 
