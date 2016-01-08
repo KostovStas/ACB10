@@ -1,10 +1,10 @@
 package home_work.week_3_1;
 import java.util.Scanner;
 
-// 5)Ввести предложение с консоли, каждое четное слово инвертировать, в каждом нечетном слове удалить каждую четную букву.
-// Результат выводить на консоль.
-// Ввод:   Как решить это задание и не сломать себе голову?
-//  Вывод: каК ршт отэ здне и н ьтамолс сб ?уволог
+// 5)пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+// пїЅпїЅпїЅпїЅ:   пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ?
+//  пїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ ?пїЅпїЅпїЅпїЅпїЅпїЅ
 // 5)Enter a sentence from the console, each even-numbered word is inverted in every odd word to delete every even numbered letter.
 // The result is output to the console.
 
@@ -12,9 +12,26 @@ public class InvertedWordDeleteEveryEvenNumberedLetter_4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your message");
-        String messag = sc.nextLine();
-        String [] mass = messag.split(" ");
-        for ( int i = 1; i <= mass.length; i++){
+        String message = sc.nextLine();
+        String [] mass = message.split(" ");
+
+        for (int i = 0; i < mass.length; i++) {
+            if(i % 2 == 0) {
+//                cut letters
+                char[] letters = mass[i].toCharArray();
+                for (int j = 0; j < letters.length; j++) {
+                    if(j % 2 != 0) {
+                        letters[j] = '\u200B';
+                    }
+                }
+                mass[i] = new String(letters);
+            } else {
+//                reverse
+                mass[i] = new StringBuilder(mass[i]).reverse().toString();
+            }
+        }
+
+        /*for (int i = 1; i <= mass.length; i++){
 
             if (i % 2 == 0){
 
@@ -46,13 +63,12 @@ public class InvertedWordDeleteEveryEvenNumberedLetter_4 {
                 }
 
 
-            }
+            }*/
 
         for (int i=0 ;i<mass.length;i++ ){
-            System.out.printf (mass[i] + " ");
+            System.out.print(mass[i] + " ");
         }
-
-         }
+    }
 }
 
 
