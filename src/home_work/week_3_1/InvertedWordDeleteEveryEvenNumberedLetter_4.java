@@ -1,10 +1,6 @@
 package home_work.week_3_1;
 import java.util.Scanner;
 
-// 5)Ввести предложение с консоли, каждое четное слово инвертировать, в каждом нечетном слове удалить каждую четную букву.
-// Результат выводить на консоль.
-// Ввод:   Как решить это задание и не сломать себе голову?
-//  Вывод: каК ршт отэ здне и н ьтамолс сб ?уволог
 // 5)Enter a sentence from the console, each even-numbered word is inverted in every odd word to delete every even numbered letter.
 // The result is output to the console.
 

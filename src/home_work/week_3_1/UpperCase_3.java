@@ -16,7 +16,7 @@ public class UpperCase_3 {
         for (int i = 0; i < mass.length; i++)
         {//mass[i]= mass[i].substring(0,1).toUpperCase();
             //String temp1 = mass[i].substring(0,1);
-            //String temp2 = mass[i].substring(0,1).toUpperCase();
+            //Strin            g temp2 = mass[i].substring(0,1).toUpperCase();
             //mass [i] = mass[i].replace(mass[i].substring(0,1),mass[i].substring(0,1).toUpperCase());
             /*mass[i]=mass[i].toUpperCase().replace(mass[i].toUpperCase().substring(1,mass[i].length()),
                     mass[i].substring(1,mass[i].length()));*/
