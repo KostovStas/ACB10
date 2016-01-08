@@ -18,8 +18,12 @@ public class UpperCase_3 {
             //String temp1 = mass[i].substring(0,1);
             //String temp2 = mass[i].substring(0,1).toUpperCase();
             //mass [i] = mass[i].replace(mass[i].substring(0,1),mass[i].substring(0,1).toUpperCase());
-            mass[i]=mass[i].toUpperCase().replace(mass[i].toUpperCase().substring(1,mass[i].length()),
-                    mass[i].substring(1,mass[i].length()));
+            /*mass[i]=mass[i].toUpperCase().replace(mass[i].toUpperCase().substring(1,mass[i].length()),
+                    mass[i].substring(1,mass[i].length()));*/
+
+            char[] letters = mass[i].toCharArray();
+            letters[0] = Character.toUpperCase(letters[0]);
+            mass[i] = new String(letters);
 
         }
 
