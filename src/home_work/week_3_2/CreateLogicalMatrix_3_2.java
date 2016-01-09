@@ -13,9 +13,9 @@ public class CreateLogicalMatrix_3_2 {
         System.out.println("Enter rows");
         Scanner sc = new Scanner(System.in);
         int rows = sc.nextInt();
-        System.out.println("Enter colums");
-        int colums = sc.nextInt();
-       boolean[][] matrix =MultiArrayUtils.createArrayBoolean(rows,colums);
+        System.out.println("Enter columns");
+        int columns = sc.nextInt();
+       boolean[][] matrix =MultiArrayUtils.createArrayBoolean(rows,columns);
          for (int i = 0; i < matrix.length; i++) {
         for (int j = 0; j < matrix[i].length; j++) {
             if (i==j) {
