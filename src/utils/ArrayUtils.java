@@ -5,7 +5,7 @@ public class ArrayUtils {
     public  static int[] createArray(int size){
         int [] mass = new int [size];
         for(int i = 0; i < size; i++) {
-            mass[i] = i;
+                mass[i] = i;
         }
         return  mass;
     }

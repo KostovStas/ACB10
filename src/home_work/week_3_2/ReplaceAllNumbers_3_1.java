@@ -24,18 +24,12 @@ public class ReplaceAllNumbers_3_1 {
                 if (matrix[i][j] % 5 == 0) {
 
                     matrix[i][j]=8;
-
-
-
                 }
-
             }
-            MultiArrayUtils.printMultiArray(matrix);
-        }
 
-
+        }MultiArrayUtils.printMultiArray(matrix);
     }
 
-    }
+}
 
 

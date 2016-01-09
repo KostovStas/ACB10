@@ -15,18 +15,21 @@ public class CreateLogicalMatrix_3_2 {
         int rows = sc.nextInt();
         System.out.println("Enter colums");
         int colums = sc.nextInt();
-        int[][] matrix = MultiArrayUtils.createArray(rows, colums);
+       boolean[][] matrix =MultiArrayUtils.createArrayBoolean(rows,colums);
+         for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0; j < matrix[i].length; j++) {
+            if (i==j) {
 
-        for (int i = 0; i < matrix.length; i++) {
-
-            for (int j = 0; j < matrix[i].length; j++) {
-
-                }
-
-
-                }
+                matrix[i][j]=true;
             }
-//            MultiArrayUtils.printMultiArray(matrix);
-        }
-///
+         }
+
+    }
+
+        MultiArrayUtils.printMultiArrayBoolean(matrix);
+                }
+           }
+
+
+
 
