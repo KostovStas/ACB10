@@ -1,8 +1,8 @@
 package home_work.week_3_2;
 
 
-//3.5. а) Поменять наибольшую строку массива с наименьшей в двухмерном массиве. (Размер - сумма элементов в строке)
-//  b) Поменять наибольший и наименьший столбик в двухмерном массиве.
+//3.5. пїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. (пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
+//  b) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 //3.5. a) to Change the highest row of the array, with the least in a two-dimensional array. (Size - sum of elements in row)
 // b) to Change the highest and lowest column in a two-dimensional array.
 
@@ -26,8 +26,29 @@ public class ChangeRowAndColumn_3_5 {
         int rowmin = 1; //
         int rowIndexMax = 0;
         int rowIndexMin = 0;
+
         MultiArrayUtils.printMultiArray(matrix);
-         for (int i = 0; i < rows; i++)
+
+       /* int smallestRowIdx = 0;
+        int largestRowIdx = 0;
+        int smallestRowSum = findSum(matrix[0]);
+        int largestRowSum = findSum(matrix[rows -1]);
+
+        for (int i = 1; i < rows; i++) {
+            if(findSum(matrix[i]) < smallestRowSum){
+                smallestRowSum = findSum(matrix[i]);
+                smallestRowIdx = i;
+            } else if(findSum(matrix[i]) > largestRowSum) {
+                largestRowSum = findSum(matrix[i]);
+                smallestRowIdx = i;
+            }
+        }
+
+        int[] tmp = matrix[largestRowIdx]matrix[smallestRowIdx];
+        matrix[largestRowIdx] = matrix[smallestRowIdx];
+        matrix[smallestRowIdx] = tmp;
+*/
+        for (int i = 0; i < rows; i++)
          {
              int s = 0;
              for (int j = 0; j < columns; j++ )
@@ -58,7 +79,15 @@ public class ChangeRowAndColumn_3_5 {
                 colums1[i] += matrix[j][i];
             }
         }
-
+        System.out.println("*************");
         MultiArrayUtils.printMultiArray(matrix);
+    }
+
+    private static int findSum(int[] ints) {
+        int sum = 0;
+        for (int i = 0; i < ints.length; i++) {
+            sum += ints[i];
+        }
+        return  sum;
     }
 }
