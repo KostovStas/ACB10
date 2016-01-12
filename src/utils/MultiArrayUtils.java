@@ -10,7 +10,7 @@ public class MultiArrayUtils {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < colums; j++) {
 
-                matrix[i][j] = (int) (5 + Math.random() * (6 - 5));
+                matrix[i][j] = (int) (1 + Math.random() * (6 - 1));
             }
 
         }
