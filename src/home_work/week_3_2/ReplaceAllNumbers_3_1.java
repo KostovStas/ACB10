@@ -26,9 +26,11 @@ public class ReplaceAllNumbers_3_1 {
                     matrix[i][j]=8;
                 }
             }
-        }
-        MultiArrayUtils.printMultiArray(matrix);
+
+
+        }MultiArrayUtils.printMultiArray(matrix);
     }
+
 }
 
 
