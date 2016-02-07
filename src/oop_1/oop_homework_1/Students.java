@@ -10,7 +10,7 @@ public class Students {
     private int age;
     private boolean sex;
 
- public void initStudents(String name,int age, boolean sex){
+ public void initStudents(String name,int age, boolean sex,String surname,String middlename){
      this.name=name;
      this.surname=surname;
      this.middlename=middlename;
@@ -19,14 +19,16 @@ public class Students {
    }
     public void showStudent(){
         if (sex==true){
-            String sex = "Boy";
-        }else if (sex==false){
-            String sex ="Girl";
+            String sex1 = "Boy";
+            System.out.println("Your name is" +name +"you age" +age+ sex1);
+        }else{
+            String sex1 ="Girl";
+            System.out.println("Your name is " +name+ " you are " +age + sex1);
         }
-        System.out.println("Your name is" +name +"you are" +age+ sex);
+
     }
     public void showFio (){
-        System.out.println(name + surname + middlename);
+        System.out.println(name +" "+ surname +" " + middlename);
     }
 
 
