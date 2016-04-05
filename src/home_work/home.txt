@@ -1,0 +1,8 @@
+1. Read ArrayList +-
+2. String formatter(System.out.printf, String.format())
+3. getters and setters +-
+4. toString +
+5. Incapsulation +
+6. todo classwork +-
+7. JavaRush -
+8. String methods 10 - 15 ???

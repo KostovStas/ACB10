@@ -62,7 +62,7 @@ public class ArrayUtils {
 
     public static int [] randomValueOddEven (int size){
 
-        int [] array = new int [size];
+        int [] array = new int [1];
         for (int i=0; i<array.length;i++ ){
             if(i%2==0){
                 array[i]=generateRandomEven();
