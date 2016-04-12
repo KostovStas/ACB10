@@ -20,18 +20,30 @@ public class Bouquet {
     public Bouquet (){
     }
 
-    public void addflowers (Flowers flowers){
-        bouquetArrayList.add(flowers);
-
+    public boolean addFlowers(Flowers flowers){
+        return bouquetArrayList.add(flowers);
     }
 
-    public void deleteFlower(String name){
-        for (int i = 0; i <bouquetArrayList.size() ; i++) {
+    public boolean deleteOneFlower(String name){
+        for (int i = 0; i < bouquetArrayList.size(); i++) {
             if (bouquetArrayList.get(i).getName().equals(name)) {
                 bouquetArrayList.remove(i);
-
+//                exit from method
+                return true;
             }
         }
+        return false;
+    }
+    public boolean deleteAllFlowers(String name){
+        boolean wasDeletion = false;
+        for (int i = 0; i < bouquetArrayList.size(); i++) {
+            if (bouquetArrayList.get(i).getName().equals(name)) {
+                bouquetArrayList.remove(i);
+                i--;
+                wasDeletion = true;
+            }
+        }
+        return wasDeletion;
     }
 
     public void showEachFlowerBouquet  () {
@@ -41,13 +53,13 @@ public class Bouquet {
         }
     }
 
-    public  void showpriceOfBouquet(){
+    public int showPriceOfBouquet(){
         int priceOfBouquet = 0;
         for (int i = 0; i <bouquetArrayList.size() ; i++) {
              priceOfBouquet += bouquetArrayList.get(i).getPrice();
 
         }
-        System.out.println("Your bouquet price is " + priceOfBouquet + " $");
+        return priceOfBouquet;
     }
 
     @Override
@@ -67,17 +79,22 @@ public class Bouquet {
 
 
 
-    public  void sortBouquetOnFreechest (Bouquet bouquet){
+    public  void sortBouquetOnFreechest (){
 
-        for (int i = 0; i <bouquetArrayList.size() ; i++) {
-
-
+        for (int j = bouquetArrayList.size(); j > 0; j--) {
+            for (int i = 0; i < j - 1; i++) {
+                if (bouquetArrayList.get(i).getLevelOfFreshness() > bouquetArrayList.get(i + 1).getLevelOfFreshness()) {
+                    Flowers temp = bouquetArrayList.get(i);
+                    bouquetArrayList.set(i, bouquetArrayList.get(i + 1));
+                    bouquetArrayList.set(i + 1, temp);
+                }
+            }
         }
 
-
-        }
 
     }
+
+}
 
 
 

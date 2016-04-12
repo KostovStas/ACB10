@@ -4,23 +4,12 @@ package oop_2_week_2;
 
 
     public class Flowers {
-
-
         private String name;
         private int longStem;
         private int price;
         private String color;
         private int levelOfFreshness;
-        private String accessories;
 
-        public Flowers(String name, int longStem, int price, String color, int levelOfFreshness, String accessories) {
-            this.name = name;
-            this.longStem = longStem;
-            this.color = color;
-            this.levelOfFreshness = levelOfFreshness;
-            this.price = price;
-            this.accessories = accessories;
-        }
 
         public Flowers(String name, int longStem, int price, String color, int levelOfFreshness) {
             this.name = name;
@@ -72,11 +61,13 @@ package oop_2_week_2;
 
         @Override
         public String toString() {
-            return String.format("Flower name is %s. Long stem is %d, color is %s, the level of freshness of the flower is %s, price = %d", name, longStem, color, levelOfFreshness, price);
+            return String.format("Flower name is %s. Long stem is %d, color is %s," +
+                                    " the level of freshness of the flower is %s, price = %d",
+                                    name, longStem, color, levelOfFreshness, price);
 
         }
 
-        public void showFlawerName() {
+        public void showFlowerName() {
             System.out.println("Flawer name is " + name);
 
         }
