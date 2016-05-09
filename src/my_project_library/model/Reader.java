@@ -138,17 +138,9 @@ public class Reader {
             return true;
         }
 
-    public boolean showBooksOfReader() {
+    public void showBooksOfReader() {
         for (int i = 0; i < books.size(); i++) {
             System.out.println(books.get(i));
-
-        }return true;
+        }
     }
-
-
-
-
-
-
-
 }

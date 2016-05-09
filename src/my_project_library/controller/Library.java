@@ -119,11 +119,10 @@ public class Library {
     }
 
 
-    public boolean showAllBooksOfReaders () {
+    public void showAllBooksOfReaders () {
         for (int i = 0; i < readers.size(); i++) {
 
-            System.out.println(readers.get(i).showBooksOfReader());
-        }return true;
-
+           readers.get(i).showBooksOfReader();
+        }
     }
 }
