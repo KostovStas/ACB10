@@ -1,7 +1,7 @@
 /*
 package my_philosophy;
 
-import oop_1._1.Practic;
+import opp.oop_1._1.Practic;
 
 */
 /**

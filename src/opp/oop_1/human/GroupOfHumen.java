@@ -1,4 +1,4 @@
-package my_philosophy.human;
+package opp.oop_1.human;
 
 import java.util.ArrayList;
 
